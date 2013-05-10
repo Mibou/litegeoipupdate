@@ -1,4 +1,8 @@
 #!/bin/sh
+# Author : Valérian Saliou
+#
+# Updates
+# 2013.05.10 09:52 : Changing hard-coded email address to a variable
 
 EMAIL=""
 GEOIPDIR=/usr/share/GeoIP
