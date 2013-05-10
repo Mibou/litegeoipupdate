@@ -29,7 +29,7 @@ To fully automate this process on Linux or Unix, use a crontab file like :
     # Top of crontab
     MAILTO=your@email.com
 
-    0 4 * * 3 /usr/local/bin/litegeoipupdate
+    0 4 * * 3 root /usr/local/bin/litegeoipupdate &>/dev/null
     # End of crontab
 
 This Cron will run the update every wednesday at 4:00 am and send an email to `MAILTO` if there is any problem.
