@@ -31,7 +31,7 @@ if [ -d "${GEOIP_PATH}" ]; then
                 chmod 0644 "${GEOIP_PATH}/${fname}.dat"
             else
                 if [ -n "${MAILTO}" ]; then
-                    echo "There was an error updating the following GeoIP database: "$db | /usr/bin/mail -s "[WARNING - agency] GeoIP update error" ${MAILTO}
+                    echo -e "From: ${MAILFROM}\nSubject: GeoIP update error\n\nThere was an error updating the following GeoIP database: "$db |sendmail ${MAILTO}
                 else
                     echo "There was an error updating the following GeoIP database: "$db
                 fi
