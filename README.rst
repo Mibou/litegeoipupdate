@@ -28,6 +28,7 @@ To fully automate this process on Linux or Unix, use a crontab file like :
 
     # Top of crontab
     MAILTO=your@email.com
+    MAILFROM="You you <your@email.com>"
 
     0 4 * * 3 root /usr/local/bin/litegeoipupdate &>/dev/null
     # End of crontab
